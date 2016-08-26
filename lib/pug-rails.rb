@@ -11,8 +11,8 @@ module Pug
       source = source.read if source.respond_to?(:read)
 
       # Command line arguments take precedence over json options in Jade binary
-      # @link https://github.com/jadejs/jade/blob/master/bin/jade.js
-      cmd = %w( jade )
+      # @link https://github.com/pugjs/pug-cli/blob/master/index.js
+      cmd = %w( pug )
       cmd.push('--client')
       cmd.push('--path', options[:filename]) if options[:filename]
       cmd.push('--pretty')                   if options[:pretty]
